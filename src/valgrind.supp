@@ -186,3 +186,28 @@
    fun:main
 }
 
+# lttng-ust
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: possible
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   obj:/usr/lib64/liblttng-ust.so.0.0.0
+   fun:call_init.part.0
+   fun:_dl_init
+   obj:/usr/lib64/ld-2.20.so
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: possible
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   obj:/usr/lib64/liblttng-ust.so.0.0.0
+   fun:call_init.part.0
+   fun:_dl_init
+   obj:/usr/lib64/ld-2.20.so
+}
